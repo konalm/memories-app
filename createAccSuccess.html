@@ -1,0 +1,29 @@
+<!DOCTYPE html> 
+
+<html> 
+<head>
+    
+</head>
+
+<body>
+
+
+    <h4> Welcome {{_fname}} {{_lname}} </h4> 
+    <h8> Your new Account has been successfully created! </h8> 
+    
+    <p> Hold on while you be redirected or go straight to <a href="login">login</a> </p> 
+    
+</body>
+</html> 
+
+<script>
+    
+var callLogin = setTimeout(GoToLogin, 4000);
+
+function GoToLogin() {
+    window.location = "login"; 
+}
+
+</script> 
+
+

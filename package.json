@@ -1,0 +1,20 @@
+{
+  "name": "User-Account",
+  "description": "Demonstrates client-side templates with mustache and Node",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "async": "0.1.x",
+    "express": "~4.14.0",
+    "mysql": "~2.11.1",
+    "multer": "~1.1.0"
+  },
+  "devDependencies": {
+    "should": "~9.0.2",
+    "mocha": "~2.5.3",
+    "supertest": "~1.2.0"
+  }
+}
+
+
+

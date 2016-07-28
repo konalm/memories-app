@@ -1,0 +1,418 @@
+html,
+body {
+  overflow-x: hidden; /* Prevent scroll on narrow devices */
+}
+body {
+  padding-top: 50px;
+  position: relative; /* For scrollyspy */
+}
+
+section[data-page-uri] {
+  display: none;
+}
+
+[data-uri="/"] section[data-page-uri="/"],
+[data-uri="/guide"] section[data-page-uri="/guide"],
+[data-uri="/api"] section[data-page-uri="/api"],
+[data-uri="/blog"] section[data-page-uri="/blog"],
+[data-uri="/contact"] section[data-page-uri="/contact"] {
+  display: block;
+}
+
+[data-uri="/api"] footer {
+  display: none;
+}
+footer {
+  margin-top: 20px;
+  padding: 15px 0;
+  color: #444444;
+  font-size: 12px;
+}
+.jumbotron {
+  padding-top: 0;
+  padding-bottom: 0;
+  background: #000111;
+  margin-bottom: 0;
+}
+.jumbotron .col-lg-7 {
+  padding-left: 26px;
+  padding-top: 32px;
+}
+.jumbotron h1 {
+  background-repeat: no-repeat;
+  font-size: 72px;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-top: 0;
+  font-family: 'Source Sans Pro',sans-serif;
+  letter-spacing:-5px;
+  font-weight:200;
+  color:#FF7F2B;
+}
+.jumbotron > .container .col-lg-5{
+  background: url(../img/sample_test_atom.png) no-repeat 0 20px;
+  background-size: contain;
+  margin-top: 20px;
+  opacity: .8;
+  height: 300px;
+}
+.container.download {
+  background: #eee;
+  padding: 20px;
+  width: 100%;
+}
+.container.example {
+  width: 100%;
+  margin-top:20px;
+  background: #000111;
+  color:#f2f2f2;
+}
+.jumbotron > .container .col-lg-7 span{
+  font-size: 92px;
+}
+
+.jumbotron h1 span {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding-top: 52px;
+}
+.jumbotron h1 img {
+  float: left;
+}
+pre.language-javascript {
+  border-width: .1em !important;
+}
+.screenshot {
+  background: url(../img/demotestoutput.png) no-repeat;
+  height: 360px;
+  background-size: 100%;
+}
+.secondary .jumbotron h1 {
+  background-image:none;
+  padding: 0;
+  font-family: 'Helvetica Neue','Source Sans Pro',sans-serif;
+  font-weight: 100;
+  letter-spacing: -1px;
+  font-size: 50px;
+}
+.secondary .jumbotron {
+  margin-bottom: 0;
+}
+.jumbotron h1 em{
+  font-style: normal;
+  color:#794422;
+}
+.jumbotron p {
+  color: #aaa99e;
+  font-size: 32px;
+  padding-left: 15px;
+}
+.navbar-default {
+  background: #000111;
+  border: 0;
+  border-bottom: 1px solid #111222;
+}
+.navbar-default .navbar-nav > li > a {
+  color:#bbb;
+  padding: 10px 0px 5px;
+  margin:0 10px;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color:#ff7f2b;
+  background: transparent;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  background: transparent;
+  color:#ff7f2b;
+  border-bottom: 1px solid #ff7f2b;
+}
+.navbar-default .navbar-toggle {
+  border-color: #555555;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: #333;
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  border-color: transparent;
+}
+.btn-lg {
+  border-radius: 0;
+  border: 0;
+  background: #794422;
+  color:#eee;
+  font-size:20px;
+  text-shadow: 1px 0 1px rgba(0, 0, 0, 0.5);
+}
+.btn-lg span.version {
+  display:inline-block;
+  font-size: 12px;
+  margin-left: 5px;
+}
+.jumbotron .btn-primary span.glyphicon {
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+}
+.jumbotron .btn-primary:hover,
+.jumbotron .btn-primary:focus,
+.jumbotron .btn-primary:active,
+.jumbotron .btn-primary.active{
+  background-color: #502d17;
+  text-shadow: none;
+  color:#afc3ef;
+}
+h2, .h2 {
+  font-size: 30px;
+}
+h1,.h1,h2,.h2,h3,.h4,h4,.h4 {
+  font-family: 'Helvetica Neue','Source Sans Pro',sans-serif;
+  font-weight: 300;
+}
+h3,.h3,h4,.h4 {
+  font-weight: 400;
+  color:#222;
+}
+h4,.h4 {
+  font-family: Helvetica, sans-serif;
+}
+.jumbotron .row {
+  margin-top: 30px;
+}
+.jumbotron .row .download {
+  text-align: right;
+}
+
+footer {
+  background: #eee;
+}
+footer .align-left {
+  float: left;
+}
+footer .align-right {
+  float: right;
+}
+.jumbotron .btn-github {
+  background-image: url(../img/github.png);
+  background-repeat: no-repeat;
+  background-position: 9px 7px;
+  padding-left: 48px;
+}
+.jumbotron .btn-github:hover {
+  background-position:9px -35px;
+}
+/*
+.glyphicon-github:before {
+  content:"\f00a";
+  speak: none;
+}
+*/
+
+ul.features {
+  list-style: none;
+  padding: 0;
+}
+.sample-test {
+  /*background: url(../img/sample_test.png) no-repeat;*/
+  width: 100%;
+  font-size: 12px;
+}
+.sample-test pre {
+  font-size: 13px;
+  margin-bottom: 5px;
+  border-radius:0;
+}
+
+.sample-test pre em.ln {
+  font-style: normal;
+  display: inline-block;
+  min-width: 20px;
+  background: #333;
+  text-align: right;
+  padding: 1px 1px;
+  font-size: 12px;
+  line-height: 19px;
+  color: #999;
+}
+.sample-test pre ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.page-header {
+  margin: 25px 0 0;
+}
+.docs-section .page-header h2{
+  font-size: 38px;
+}
+.docs-section h3 {
+  font-weight: 300;
+  margin-top: 0;
+  padding-top: 20px;
+}
+blockquote {
+  font-style: italic;
+}
+blockquote p {
+  font-size: 14px;
+  line-height: normal;
+  font-weight: 1.5;
+}
+pre.light {
+  background: none repeat scroll 0 0 #EEEEEE;
+  color: #333333;
+  font-size: 12px;
+}
+span.optional {
+  background: none repeat scroll 0 0 #FF7F2B;
+  border-radius: 2px;
+  color: #FFFFFF;
+  font-size: 11px;
+  padding: 1px 3px;
+}
+span.since {
+  font-weight: 400;
+  vertical-align: middle;
+}
+.apimethod code {
+  background-color: transparent;
+  padding-left: 0;
+}
+#api-container .sample-test {
+  width: 650px;
+}
+#api-container pre.rainbow {
+  padding: 3px;
+  white-space: pre;
+  word-break: normal;
+  word-wrap: normal;
+  overflow-x: auto;
+}
+.social {
+  margin: 30px auto 0;
+  padding: 0;
+  width: 220px;
+}
+.social .fb_iframe_widget {
+  font-size: 6px;
+}
+.social ul {
+  list-style: none;
+  height: 20px;
+  padding: 0;
+  margin: 0;
+}
+.social ul li{
+  float: left;
+  height: 20px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
+.col-lg-6.download {
+  text-align: right;
+}
+.container .intro {
+  border-bottom: 1px solid #ccc;
+  color: #777999;
+  font-size: 18px;
+  font-weight: 300;
+  margin: 0 auto 70px;
+  max-width: 792px;
+  padding: 0 20px 10px;
+  text-align: center;
+}
+.feature-icon {
+  width: 96px;
+  height: 96px;
+  border:1px solid #ccc;
+  margin:0 auto 0;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  background-size: 100%;
+}
+.vertical-line {
+  width: 1px;
+  height: 24px;
+  background: #ccc;
+  margin: 0 auto;
+}
+.feature-icon.syntax {background-image: url(../img/icons/syntax-128.svg);}
+.feature-icon.testrunner {background-image: url(../img/icons/testrunner-128.svg);}
+.feature-icon.selenium {background-image: url(../img/icons/selenium-128.svg);}
+.feature-icon.cloudtesting {background-image: url(../img/icons/cloudtesting-128.svg);}
+.feature-icon.junit {background-image: url(../img/icons/junit-128.svg);}
+.feature-icon.plugin {background-image: url(../img/icons/plugins-128.svg);}
+.feature-icon.selectors {background-image: url(../img/icons/selectors-128.svg);}
+ul.features h3 {
+  margin: 0 0 5px;
+  font-weight: 300;
+  font-size: 25px;
+  color:#777999
+}
+ul.features li p, .container.twitter p{
+  color: #777;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+@media screen and (max-width: 992px) {
+  .jumbotron > .container .col-lg-5{
+    display: none;
+  }
+  .jumbotron > .container .col-md-7 span{
+    font-size: 78px;
+    margin-top: 20px;
+  }
+}
+ul.features li.testrunner {padding-top: 110px;}
+ul.features li.selenium {padding-top: 100px;}
+ul.features li.cloudtesting {padding-top: 128px;}
+ul.features li.selectors {padding-top: 118px;}
+ul.features li.plugins {padding-top: 115px;}
+ul.features li.junit {padding-top: 140px;}
+.logo-small img {
+  height: 34px;
+  margin-top: 8px;
+  vertical-align: bottom;
+}
+.logo-small a {
+  text-decoration: none;
+  color: #999;
+  margin-left: 40px;
+  font-size: 11px;
+}
+@media screen and (min-width: 992px) {
+  .example .sampleoutput {
+    padding: 0;
+  }
+
+}
+@media screen and (max-width: 1200px) {
+  .jumbotron > .container .col-md-7 span{
+    font-size: 78px;
+    margin-top: 20px;
+  }
+  .jumbotron p {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .jumbotron h1 {
+    font-size: 60px;
+    padding-top: 43px;
+  }
+  .jumbotron {
+    padding-left: 10px
+  }
+  .jumbotron p {
+    font-size: 16px;
+  }
+  .jumbotron .row .download {
+    text-align: left
+  }
+  .btn-lg {
+    width: 100%;
+  }
+}

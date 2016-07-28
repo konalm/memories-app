@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<!--
+<script> 
+if ( localStorage.getItem("LoggedIn") == 'true' ) {
+  //  window.location = "profile"; 
+}
+</script> 
+-->
+
+<html>
+<head>
+<title> Login </title> 
+ <script src="mustache.js"> </script> 
+</head>
+
+<body>
+    <br> 
+    <h4> Login </h4> 
+    <form method="post" action="logVal">
+        <p> 
+            Email <input type="text" name="email"> 
+            <script> document.write('{{_emailError}}'); </script>
+        </p> 
+        
+        <p> 
+            Password <input type="text" name="passw"> 
+            <script> document.write ('{{_passwError}}'); </script> 
+        </p> 
+        
+        <script>
+            document.write('{{_loginError}}');
+         </script>
+        
+        <br>
+    <input type="submit" value="submit"> 
+    
+    <br> <br> 
+    
+    <a href="createAccount"> Create Account </a>
+    
+    </form> 
+    
+</body>
+</html>

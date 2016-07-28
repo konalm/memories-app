@@ -1,0 +1,33 @@
+<html>
+<head>
+<title> Create Account </title>
+</head>
+
+<body> 
+    <h3> Create Account </h3>
+    <form method="post" action="createAccCheck">
+       <p> 
+       First Name <input type="text" name="fname">
+       <script> document.write('{{_fnameError}}'); </script>
+       </p> 
+           
+        <p> 
+        Last Name <input type="text" name="lname">
+        <script> document.write('{{_lnameError}}'); </script> 
+        </p> 
+        
+        <p>
+        Email <input type="text" name="email">
+        <script> document.write('{{_emailError}}'); </script> 
+        </p> 
+        
+        <p> 
+        Password <input type="text" name="passw">
+        <script> document.write('{{_passwError}}'); </script> 
+        </p> 
+        
+        <input type="submit" value="submit">
+        </form> 
+           
+        
+                
