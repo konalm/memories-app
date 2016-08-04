@@ -1,0 +1,18 @@
+<html>
+<head>
+<title> Memory </title>
+</head>
+
+<body>
+<h3> <%= _memory %> </h3> 
+
+<ul>
+<% for (var i=0; i<_photos.length; i++) { %> 
+    <li>
+    <img src="../uploads/<%=_photos[i]%>" width="250" height="250" /> 
+    </li> 
+<% } %> 
+</ul> 
+
+</body>
+</html> 

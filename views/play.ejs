@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title>Dashboard</title>
+    <style type="text/css">
+
+    #userBox {
+      color:rgb(100,100,100); 
+    }
+
+    </style>
+  </head>
+
+  <body>
+
+ <h1>Users</h1>
+  
+ <%= firstName %> <%= lastName %>
+
+ <br> <br>
+
+ <!-- <img src="<%= profilePicPath %>" height="150" width="250" alt="profile picture"> -->
+ <img src="<%= profilePicPath %>" height="150" width="250" alt="profile picture">
+
+  <script> console.log(" <%= profilePicPath %> "); </script>
+
+  <ul>
+  <% for (var i=0; i<users.length; i++) { %> 
+      <li> <%= users[i] %> </li> 
+  <% } %> 
+  </ul> 
+
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+<html>
+<head>
+<title> Add Photo </title> 
+
+</head>
+
+<body>
+
+    <h3> Add photo to <%= _memory %> </h3> 
+
+    <form id="addPhoto" enctype="multipart/form-data" action="/api/addPhoto/?id=<%= _memory %>" method="post">
+    <input type="file" name="addPhoto" /> 
+    <input type="submit" value="Add Photo" name="addPhoto">
+    </form>
+
+</body>
+</html> 
+

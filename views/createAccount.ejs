@@ -1,0 +1,52 @@
+<html>
+<head>
+<title> Create Account </title>
+<link rel="stylesheet" type="text/css" href="css/createAccount.css"> </script>
+</head>
+
+<body> 
+    
+    <br> 
+    <h2>Memories  </h2> 
+    
+    <div id="box">
+    <form method="post" action="createAccCheck">
+       <p> 
+       <input type="text" name="fname" placeholder="First Name">
+    <!--   <script> document.write('{{_fnameError}}'); </script> --> 
+       <%= _fnameError %> 
+       </p> 
+           
+        <p> 
+        <input type="text" name="lname" placeholder="Last Name">
+    <!--  <script> document.write('{{_lnameError}}'); </script> -->
+        <%= _lnameError %>
+        </p> 
+        
+        <p>
+        <input type="text" name="email" placeholder="Email">
+      <!--  <script> document.write('{{_emailError}}'); </script> -->
+        <%= _emailError %> 
+        </p> 
+        
+        <p> 
+        <input type="password" name="passw" placeholder="Password">
+     <!--   <script> document.write('{{_passwError}}'); </script> -->
+        <% _passwError %> 
+        </p> 
+        
+        <p> 
+        <input type="password" name="passwConfirm" placeholder="Confirm Password">
+      <!--  <script> document.write('{{_passwConfirmError}}'); </script> -->
+        <% _passwConfirmError %> 
+        </p> 
+        
+        <br>
+        
+        <input type="submit" value="Create Account">
+    </form> 
+    </div>
+        
+           
+        
+                

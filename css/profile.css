@@ -1,0 +1,85 @@
+body{
+    background-color: rgb(240,240,245); 
+}
+
+#profilePic {
+    margin-left: 20px;
+    margin-top:10px;
+    float: left;
+    border: 0px solid yellow;
+}
+
+#logout {
+    float: right;
+    border: 0px solid green; 
+}
+
+#logout input[type=submit] {
+    border: 1px solid grey;
+    background-color: white;
+    height: 25px;
+    width: 75px;
+}
+
+#name {
+    float: right;
+    border: 0px solid red; 
+    text-align: center;
+    font-size: 37px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    color: rgb(70,70,80);
+}
+
+#holder {
+    width: 850px;
+    height: 450px;
+    float: left;
+    border: 0px solid blue;
+    position: fixed;
+    top: 40%;
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    background-color: white;
+    padding:15px;
+    box-shadow: 0px 3px 5px rgb(220,220,220);
+}
+
+#holderUpper {
+    float: left;  
+    border: 0px solid olive;
+    width: 100%; 
+}
+
+#holderLower {
+    float: left; 
+    border: 0px solid purple;
+    width: 100%;
+    margin-top: 100px;
+}
+
+#createMemHolder {
+     border: 2px solid rgb(70,100,230);
+    float: right;
+   /* width: 75px;
+    height: 75px; */ 
+    padding: 7px;
+    margin-right:70px;
+    box-shadow: 0px 5px 7px rgb(180,180,180); 
+}
+
+#createMem {
+ /*   border: 2px solid rgb(70,100,230);
+    float: right;
+   /* width: 75px;
+    height: 75px; */
+ /*   padding: 7px;
+    margin-right:70px;
+    box-shadow: 0px 5px 7px rgb(180,180,180); */
+}
+
+#nameMemForm {
+    display:none;
+    text-align:center;
+}
+
+

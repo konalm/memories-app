@@ -27,18 +27,25 @@ app.get("/createTable", function(req,res) {
     var ppSqlQuery = "CREATE TABLE ProfilePics (Account_id int, Email VARCHAR(100), ProfilePicPath VARCHAR(255)," +
                      "PRIMARY KEY(Account_id) )";
     
-   connection.query(ppSqlQuery, function(err, result) {
+    var memSqlQuery = "CREATE TABLE Memories (Account_id int, Email VARCHAR(100), Memory VARCHAR(255)," +
+                        "PRIMARY KEY(Account_id) )";
+    
+    var photoTableQuery = "CREATE TABLE Photos (id int, Email VARCHAR(100), Memory VARCHAR(100), Photo VARCHAR(100)," +
+                            "PRIMARY KEY(id) )";
+    
+   connection.query(photoTableQuery, function(err, result) {
         if (err) {
             console.log(err); 
+            res.send("Error creating table");
         } 
         else {
-            console.log("Table Accounts Created");
+            console.log("Table Created");
+            res.send("Table created");
         }
-         //   connection.end();
+          connection.end();
     });  
 
-    
-   // connection.end
+
 });
 
 console.log("listening at port 8080"); 

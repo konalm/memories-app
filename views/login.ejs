@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title> Login </title> 
+<link rel="stylesheet" type="text/css" href="css/login.css"> </script> 
+</head>
+
+<body>
+    
+    <br> 
+    <h2>Memories  </h2> 
+    
+    <div id="box">
+        
+    <img src="images/loginPic.png" height="100" width="100" />
+        
+    <form method="post" action="logVal">
+        <p> 
+            <input type="text" name="email" placeholder="Email"> 
+            <%= _emailError %> 
+        </p> 
+   
+        <p> 
+            <input type="password" name="passw" placeholder="Password"> 
+            <% _passwError %> 
+        </p> 
+        
+       <p> <%= _loginError %> </p>
+        
+        <br>
+    <input type="submit" value="Sign In" id="signin"> 
+    
+    <br> <br> 
+    
+ 
+    </form> 
+    </div>
+    
+    <div id="createAccount"> 
+    <form action="createAccount" method="get">
+     <!-- <a href="createAccount"> Create Account </a> -->
+     <input type="submit" value="Create Account" id="createAccount">
+     </form>
+     </div>
+    
+</body>
+</html>

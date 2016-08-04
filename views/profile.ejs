@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Profile Page </title> 
+
+<link rel="stylesheet" type="text/css" href="css/profile.css"> </script> 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>  
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl">
+  
+  <div id="holder">
+  <div id="holderUpper">
+
+<script> var memAddPhoto = ""; </script> 
+      
+  <div id="profilePic">
+  <img src="<%= _profilePicPath %>" height="150" width="250" alt="profile picture"> 
+  <form id="uploadForm" enctype="multipart/form-data" action="/api/photo" method="post">  
+  <input type="file" name="profilePic" /> 
+  <input type="submit" value="Upload Profile Pic" name="submit">
+  </form>
+  </div>
+  
+  <div id="logout">
+    <form id="logoutRequest" action="/logout" method="post">
+    <input type="submit" value="Logout" name="Logout"> 
+    </form> 
+  </div>
+  
+  <div id="name"> 
+    <h2> <%= _firstName %> <%= _lastName %> </h2>
+ </div> 
+ 
+ </div> <!-- upper END -->
+ 
+ <div id="holderLower"> 
+
+<div id="memories">
+ <h4>Memories</h4> 
+  <p>
+    <ul>
+    <% for (var i=0; i<_memories.length; i++) { %> 
+        <li> 
+            <a href="memory/?id=<%= _memories[i] %>"> <%= _memories[i] %> </a> 
+         <!--   <form id="uploadMemImage" enctype="multipart/form-data" action="/api/addPhoto/?id=<%= _memories[i] %>"> -->
+               <input type="submit" value="Add Image" name="addImage" 
+                onclick="window.location='api/addPhoto/?id=<%= _memories[i] %>'; " >  
+        </li> 
+    <% } %> 
+    </ul> 
+
+ </p> 
+</div>
+     
+<div id="createMemHolder">
+ <div id="createMem"> 
+     <p> Create a new memory </p> 
+</div> 
+<div id="nameMemForm">
+    <input type="text" name="nameMem" placeholder="Name of Memory" ng-model="data.nameMem"> <br>
+    <input type="submit" value="Create" name="createMem" ng-click="submit()"> 
+</div> 
+</div>
+
+</div> <!-- lower END -->
+</div> <!-- holder END --> 
+         
+    <br> <br>
+
+</body>
+</html> 
+
+<script> 
+
+var createMem = document.getElementById('createMem'); 
+createMem.style.cursor = 'pointer';
+
+createMem.onclick = function() {
+ //  console.log("clicked on create memory");
+    $("#nameMemForm").css("display", "block"); 
+};
+
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope, $http) {
+    $scope.data = {}; 
+    $scope.submit = function() {
+        console.log("clicked on create"); 
+    
+         $http({
+            method: 'POST',
+            url: '/api/addMem',
+            data: $scope.data
+         }).then(function (httpResponse) {
+             console.log('response: ', httpResponse); 
+         })
+            
+        } // submit -> END
+
+    $scope.addPhoto = function() {
+        console.log("clicked on add photo"); 
+     //   window.location = "addPhoto/" + $scope.
+
+    }
+
+   }); // controller -> END
+
+</script>
+
